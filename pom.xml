@@ -7,6 +7,7 @@
     <groupId>com.undancer.breath</groupId>
     <artifactId>breath-bom</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <organization>
         <name>undancer</name>
@@ -14,6 +15,10 @@
     </organization>
 
     <!--<scm></scm>-->
+
+    <modules>
+        <module>demo</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,7 +36,7 @@
         <!--<kotlin.compiler.incremental>true</kotlin.compiler.incremental>-->
 
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-        <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
 
         <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
@@ -240,7 +245,12 @@
     <build>
         <pluginManagement>
             <plugins>
-
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
